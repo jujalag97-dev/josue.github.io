@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abarrotes Alma Marcela Gozo | almamarcela.com.mx</title>
+  <meta name="description" content="Abarrotes Alma Marcela Gozo - Tu tienda de confianza. Frescos, económicos y siempre cerca de ti."/>
+  <meta name="author" content="Abarrotes Alma Marcela Gozo"/>
+  <!-- Dominio: almamarcela.com.mx -->
+  <link rel="canonical" href="https://www.almamarcela.com.mx/"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --verde: #2d6a35;
+      --verde-claro: #4caf50;
+      --amarillo: #f5c842;
+      --rojo: #c0392b;
+      --crema: #fdf6e3;
+      --cafe: #7b4f2e;
+      --gris: #f4f4f4;
+      --texto: #1a1a1a;
+      --whatsapp: #25d366;
+      --whatsapp-dark: #128c4e;
+      --maps: #4285f4;
+      --maps-dark: #1a56c4;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Lato', sans-serif; background: var(--crema); color: var(--texto); overflow-x: hidden; }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--verde);
+      padding: 14px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+    }
+    .nav-logo { font-family: 'Playfair Display', serif; color: var(--amarillo); font-size: 1.2rem; font-weight: 700; }
+    .nav-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .nav-links button {
+      background: rgba(255,255,255,0.12);
+      color: white;
+      border: 2px solid rgba(255,255,255,0.3);
+      padding: 9px 20px;
+      border-radius: 50px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      font-family: 'Lato', sans-serif;
+      transition: all 0.2s;
+    }
+    .nav-links button:hover { background: var(--amarillo); color: var(--verde); border-color: var(--amarillo); }
+
+    /* ── HERO ── */
+    header {
+      background: linear-gradient(135deg, var(--verde) 0%, #1a3d20 60%, var(--cafe) 100%);
+      color: white;
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .hero-badge {
+      background: var(--amarillo); color: var(--verde); font-weight: 700; font-size: 0.75rem;
+      letter-spacing: 3px; text-transform: uppercase; padding: 6px 18px; border-radius: 50px;
+      margin-bottom: 20px; display: inline-block; animation: fadeDown 0.8s ease both;
+    }
+    h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 7vw, 5rem); font-weight: 900; line-height: 1.1; letter-spacing: -1px; animation: fadeDown 0.9s ease 0.1s both; }
+    h1 span { color: var(--amarillo); }
+    .hero-sub { font-size: 1.1rem; font-weight: 300; opacity: 0.85; max-width: 520px; margin: 18px auto 36px; line-height: 1.7; animation: fadeDown 1s ease 0.2s both; }
+    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; animation: fadeDown 1s ease 0.3s both; }
+
+    /* Botón secundario genérico */
+    .btn-secondary {
+      background: transparent; color: white; border: 2px solid rgba(255,255,255,0.6);
+      padding: 15px 32px; border-radius: 50px; font-size: 1rem; font-weight: 700;
+      cursor: pointer; text-decoration: none; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; font-family: 'Lato', sans-serif;
+    }
+    .btn-secondary:hover { background: white; color: var(--verde); border-color: white; }
+
+    /* Botón WhatsApp Hero */
+    .btn-whatsapp-hero {
+      background: var(--whatsapp); color: white; border: 2px solid var(--whatsapp);
+      padding: 15px 32px; border-radius: 50px; font-size: 1rem; font-weight: 700;
+      cursor: pointer; text-decoration: none; transition: all 0.25s;
+      display: inline-flex; align-items: center; gap: 10px; font-family: 'Lato', sans-serif;
+      box-shadow: 0 6px 20px rgba(37,211,102,0.4);
+    }
+    .btn-whatsapp-hero:hover { background: var(--whatsapp-dark); border-color: var(--whatsapp-dark); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(37,211,102,0.55); }
+
+    /* Botón Google Maps Hero */
+    .btn-maps-hero {
+      background: white; color: var(--maps); border: 2px solid white;
+      padding: 15px 32px; border-radius: 50px; font-size: 1rem; font-weight: 700;
+      cursor: pointer; text-decoration: none; transition: all 0.25s;
+      display: inline-flex; align-items: center; gap: 10px; font-family: 'Lato', sans-serif;
+      box-shadow: 0 6px 20px rgba(255,255,255,0.25);
+    }
+    .btn-maps-hero:hover { background: #f0f4ff; transform: translateY(-2px); box-shadow: 0 10px 28px rgba(66,133,244,0.35); }
+
+    .hero-icons { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+    .hero-icons span { position: absolute; font-size: 2.5rem; opacity: 0.08; animation: float 6s ease-in-out infinite; }
+    .hero-icons span:nth-child(1) { top:8%;left:5%;animation-delay:0s; }
+    .hero-icons span:nth-child(2) { top:15%;right:8%;animation-delay:1s; }
+    .hero-icons span:nth-child(3) { top:60%;left:3%;animation-delay:2s; }
+    .hero-icons span:nth-child(4) { bottom:10%;right:5%;animation-delay:0.5s; }
+    .hero-icons span:nth-child(5) { top:40%;right:15%;animation-delay:1.5s; }
+    .hero-icons span:nth-child(6) { bottom:30%;left:10%;animation-delay:3s; }
+    @keyframes float { 0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-18px) rotate(8deg);} }
+    @keyframes fadeDown { from{opacity:0;transform:translateY(-22px);}to{opacity:1;transform:translateY(0);} }
+    @keyframes popIn { from{transform:scale(0.85);opacity:0;}to{transform:scale(1);opacity:1;} }
+
+    /* ── BOTONES FLOTANTES ── */
+    .fab-container {
+      position: fixed;
+      bottom: 28px;
+      right: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      z-index: 999;
+    }
+    .fab-btn {
+      width: 58px; height: 58px; border-radius: 50%;
+      border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.55rem;
+      box-shadow: 0 6px 22px rgba(0,0,0,0.25);
+      transition: transform 0.22s, box-shadow 0.22s;
+      text-decoration: none;
+      position: relative;
+    }
+    .fab-btn:hover { transform: scale(1.12); box-shadow: 0 10px 32px rgba(0,0,0,0.3); }
+    .fab-whatsapp { background: var(--whatsapp); }
+    .fab-maps     { background: white; border: 2px solid #e0e0e0; }
+    /* Tooltip */
+    .fab-btn::before {
+      content: attr(data-tip);
+      position: absolute;
+      right: 68px;
+      background: rgba(0,0,0,0.78);
+      color: white;
+      padding: 5px 12px;
+      border-radius: 8px;
+      font-size: 0.78rem;
+      font-family: 'Lato', sans-serif;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+    }
+    .fab-btn:hover::before { opacity: 1; }
+    /* Pulso animado WhatsApp */
+    .fab-whatsapp::after {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 3px solid var(--whatsapp);
+      animation: pulse-ring 2s ease-out infinite;
+    }
+    @keyframes pulse-ring { 0%{transform:scale(0.9);opacity:0.6;} 100%{transform:scale(1.5);opacity:0;} }
+
+    /* ── SECTIONS ── */
+    section { padding: 72px 24px; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--verde); text-align: center; margin-bottom: 8px; }
+    .section-line { width: 60px; height: 4px; background: var(--amarillo); margin: 0 auto 40px; border-radius: 4px; }
+
+    /* ── CATEGORÍAS ── */
+    .cats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; max-width: 900px; margin: 0 auto 24px; }
+    .cat-card { background: white; border-radius: 18px; padding: 28px 16px; text-align: center; cursor: pointer; border: 2px solid transparent; transition: all 0.25s; box-shadow: 0 4px 14px rgba(0,0,0,0.07); }
+    .cat-card:hover, .cat-card.active { border-color: var(--verde-claro); transform: translateY(-5px); box-shadow: 0 10px 28px rgba(44,106,53,0.18); }
+    .cat-card.active { background: var(--verde); color: white; }
+    .cat-icon { font-size: 2.6rem; margin-bottom: 10px; display: block; }
+    .cat-name { font-weight: 700; font-size: 0.95rem; }
+
+    /* ── TABLA ── */
+    #seccion-productos { background: var(--gris); }
+    .table-wrap { overflow-x: auto; max-width: 1100px; margin: 0 auto; }
+    table { width: 100%; border-collapse: collapse; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 6px 24px rgba(0,0,0,0.09); }
+    thead { background: var(--verde); color: white; }
+    thead th { padding: 16px 20px; text-align: left; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; }
+    tbody tr { border-bottom: 1px solid #f0f0f0; transition: background 0.2s; }
+    tbody tr:hover { background: #f7fdf7; }
+    tbody td { padding: 14px 20px; font-size: 0.92rem; }
+    .badge { display: inline-block; padding: 4px 12px; border-radius: 50px; font-size: 0.78rem; font-weight: 700; }
+    .badge-verde  { background: #e8f5e9; color: var(--verde); }
+    .badge-azul   { background: #e3f2fd; color: #1565c0; }
+    .badge-naranja{ background: #fff3e0; color: #e65100; }
+    .badge-rojo   { background: #fce4ec; color: #b71c1c; }
+    .badge-morado { background: #f3e5f5; color: #6a1b9a; }
+    .search-bar { display: flex; max-width: 400px; margin: 0 auto 28px; }
+    .search-bar input { flex:1; padding:12px 18px; border:2px solid #ddd; border-radius:50px 0 0 50px; font-size:0.95rem; outline:none; font-family:'Lato',sans-serif; }
+    .search-bar input:focus { border-color: var(--verde-claro); }
+    .search-bar button { background:var(--verde); color:white; border:none; padding:12px 22px; border-radius:0 50px 50px 0; cursor:pointer; font-size:1rem; }
+
+    /* ── GALERÍA ── */
+    #galeria { background: white; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
+    .gallery-card { border-radius: 18px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.1); position: relative; cursor: pointer; transition: transform 0.3s; }
+    .gallery-card:hover { transform: scale(1.03); }
+    .gallery-card img { width: 100%; height: 200px; object-fit: cover; display: block; }
+    .gallery-label { position: absolute; bottom:0;left:0;right:0; background: linear-gradient(transparent, rgba(0,0,0,0.72)); color: white; padding: 20px 16px 14px; font-weight: 700; font-size: 1rem; }
+
+    /* ── MAPA EMBED ── */
+    #seccion-mapa { background: var(--gris); padding: 72px 24px; }
+    .mapa-wrap { max-width: 960px; margin: 0 auto; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.13); }
+    .mapa-wrap iframe { width: 100%; height: 400px; border: none; display: block; }
+    .mapa-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 22px; }
+    .btn-maps-lg {
+      background: var(--maps); color: white;
+      padding: 13px 28px; border-radius: 50px; font-size: 0.95rem; font-weight: 700;
+      text-decoration: none; display: inline-flex; align-items: center; gap: 9px;
+      font-family: 'Lato', sans-serif; border: none; cursor: pointer;
+      box-shadow: 0 5px 18px rgba(66,133,244,0.38);
+      transition: all 0.22s;
+    }
+    .btn-maps-lg:hover { background: var(--maps-dark); transform: translateY(-2px); box-shadow: 0 9px 26px rgba(66,133,244,0.5); }
+    .btn-wapp-lg {
+      background: var(--whatsapp); color: white;
+      padding: 13px 28px; border-radius: 50px; font-size: 0.95rem; font-weight: 700;
+      text-decoration: none; display: inline-flex; align-items: center; gap: 9px;
+      font-family: 'Lato', sans-serif; border: none; cursor: pointer;
+      box-shadow: 0 5px 18px rgba(37,211,102,0.38);
+      transition: all 0.22s;
+    }
+    .btn-wapp-lg:hover { background: var(--whatsapp-dark); transform: translateY(-2px); box-shadow: 0 9px 26px rgba(37,211,102,0.5); }
+
+    /* ── INFO TIENDA ── */
+    #seccion-info { background: linear-gradient(135deg, #1a3d20 0%, var(--verde) 100%); color: white; }
+    #seccion-info .section-title { color: var(--amarillo); }
+    .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; max-width: 960px; margin: 0 auto; }
+    .info-card { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 18px; padding: 30px 24px; text-align: center; backdrop-filter: blur(6px); transition: background 0.2s; }
+    .info-card:hover { background: rgba(255,255,255,0.18); }
+    .info-icon { font-size: 2.4rem; margin-bottom: 14px; }
+    .info-card h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin-bottom: 8px; }
+    .info-card p  { font-size: 0.9rem; opacity: 0.85; line-height: 1.6; }
+
+    /* ── MODAL PRODUCTO ── */
+    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 999; align-items: center; justify-content: center; }
+    .modal-overlay.open { display: flex; }
+    .modal { background: white; border-radius: 22px; padding: 36px; max-width: 480px; width: 90%; position: relative; animation: popIn 0.3s ease; }
+    .modal-close { position: absolute; top:16px; right:20px; background:none; border:none; font-size:1.5rem; cursor:pointer; color:#888; }
+    .modal h2 { font-family: 'Playfair Display', serif; color: var(--verde); font-size: 1.6rem; margin-bottom: 16px; }
+    .modal-emoji { font-size: 3.5rem; margin-bottom: 10px; }
+    .modal p { line-height: 1.7; color: #444; margin-bottom: 10px; }
+    .modal-price { font-size: 1.4rem; font-weight: 700; color: var(--rojo); margin-top: 14px; }
+
+    /* ── PANEL LATERAL (nav botones) ── */
+    #panel-overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.6); z-index: 500;
+      align-items: flex-start; justify-content: center;
+      padding: 80px 16px 40px; overflow-y: auto;
+    }
+    #panel-overlay.open { display: flex; }
+    #panel-contenido {
+      background: white; border-radius: 24px; max-width: 900px; width: 100%;
+      margin: 0 auto; padding: 40px 36px; position: relative; animation: popIn 0.3s ease;
+    }
+    #panel-contenido .panel-close {
+      position: absolute; top: 18px; right: 22px;
+      background: #f0f0f0; border: none; border-radius: 50%;
+      width: 36px; height: 36px; font-size: 1.2rem;
+      cursor: pointer; color: #555; display: flex; align-items: center; justify-content: center; transition: background 0.2s;
+    }
+    #panel-contenido .panel-close:hover { background: #e0e0e0; }
+
+    .panel-prod-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; margin-top: 24px; }
+    .prod-mini { background: var(--gris); border-radius: 14px; padding: 16px 14px; display: flex; flex-direction: column; gap: 6px; border: 2px solid transparent; transition: all 0.2s; cursor: pointer; }
+    .prod-mini:hover { border-color: var(--verde-claro); background: #f0faf0; transform: translateY(-2px); }
+    .prod-mini .pm-emoji { font-size: 1.8rem; }
+    .prod-mini .pm-nombre { font-weight: 700; font-size: 0.9rem; color: var(--texto); }
+    .prod-mini .pm-precio { font-weight: 700; color: var(--rojo); font-size: 0.95rem; }
+    .prod-mini .pm-unidad { font-size: 0.78rem; color: #777; }
+    .panel-search { display: flex; max-width: 340px; margin-bottom: 6px; }
+    .panel-search input { flex:1; padding:10px 16px; border:2px solid #ddd; border-radius:50px 0 0 50px; font-size:0.9rem; outline:none; font-family:'Lato',sans-serif; }
+    .panel-search input:focus { border-color: var(--verde-claro); }
+    .panel-search button { background:var(--verde); color:white; border:none; padding:10px 18px; border-radius:0 50px 50px 0; font-size:0.95rem; cursor:pointer; }
+    .panel-cat-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+    .panel-cat-tabs button { padding: 6px 16px; border-radius: 50px; border: 2px solid #ddd; background: white; font-family: 'Lato', sans-serif; font-size: 0.82rem; font-weight: 700; cursor: pointer; transition: all 0.2s; color: #555; }
+    .panel-cat-tabs button.active, .panel-cat-tabs button:hover { background: var(--verde); color: white; border-color: var(--verde); }
+
+    .panel-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin-top: 20px; }
+    .panel-gallery-card { border-radius: 16px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.1); position: relative; }
+    .panel-gallery-card img { width: 100%; height: 180px; object-fit: cover; display: block; }
+    .panel-gallery-card .gl-label { position: absolute; bottom:0;left:0;right:0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); color: white; padding: 16px 14px 10px; font-weight: 700; font-size: 0.9rem; }
+    .panel-gallery-card .gl-desc { padding: 12px 14px; background: white; font-size: 0.82rem; color: #555; line-height: 1.5; }
+
+    .tienda-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 18px; margin-top: 20px; }
+    .tienda-card { background: linear-gradient(135deg, #f7fdf7, #eaf5ea); border-radius: 18px; padding: 26px 20px; text-align: center; border: 2px solid #c8e6c9; }
+    .tienda-card .t-icon { font-size: 2.2rem; margin-bottom: 10px; }
+    .tienda-card h3 { font-family: 'Playfair Display', serif; color: var(--verde); font-size: 1rem; margin-bottom: 8px; }
+    .tienda-card p { font-size: 0.88rem; color: #444; line-height: 1.6; }
+    .tienda-banner { background: var(--verde); color: white; border-radius: 16px; padding: 20px 24px; text-align: center; margin-bottom: 24px; }
+    .tienda-banner h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--amarillo); margin-bottom: 6px; }
+    .tienda-banner p { opacity: 0.88; font-size: 0.95rem; line-height: 1.6; }
+
+    /* ── FOOTER ── */
+    footer { background: #111; color: rgba(255,255,255,0.65); text-align: center; padding: 28px 20px; font-size: 0.85rem; }
+    footer strong { color: var(--amarillo); }
+    footer a { color: var(--amarillo); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      nav { flex-direction: column; gap: 10px; }
+      .nav-links { flex-wrap: wrap; justify-content: center; }
+      #panel-contenido { padding: 28px 18px; }
+      .hero-btns { flex-direction: column; align-items: center; }
+      .fab-container { bottom: 18px; right: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">🛒 Alma Marcela Gozo</div>
+  <div class="nav-links">
+    <button onclick="abrirPanel('productos')">🛒 Productos</button>
+    <button onclick="abrirPanel('galeria')">🖼️ Galería</button>
+    <button onclick="abrirPanel('tienda')">🏪 La Tienda</button>
+  </div>
+</nav>
+
+<!-- PANEL FLOTANTE -->
+<div id="panel-overlay" onclick="cerrarPanelFondo(event)">
+  <div id="panel-contenido">
+    <button class="panel-close" onclick="cerrarPanel()">✕</button>
+    <div id="panel-body"></div>
+  </div>
+</div>
+
+<!-- HERO -->
+<header>
+  <div class="hero-icons">
+    <span>🌽</span><span>🍞</span><span>🥫</span>
+    <span>🧴</span><span>☕</span><span>🧅</span>
+  </div>
+  <div style="position:relative;z-index:2;padding:40px 20px;">
+    <div class="hero-badge">Tu tienda de confianza</div>
+    <h1>Abarrotes<br><span>Alma Marcela</span><br>Gozo</h1>
+    <p class="hero-sub">Todo lo que necesitas para tu hogar, en un solo lugar. Frescos, económicos y siempre cerca de ti.</p>
+    <div class="hero-btns">
+      <!-- Botón WhatsApp -->
+      <a href="https://wa.me/5215512345678?text=Hola%2C%20me%20interesa%20hacer%20un%20pedido%20en%20Abarrotes%20Alma%20Marcela%20Gozo%20%F0%9F%9B%92" target="_blank" class="btn-whatsapp-hero">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Contáctanos por WhatsApp
+      </a>
+      <!-- Botón Google Maps -->
+      <a href="https://maps.app.goo.gl/9Zf8KqQw3oXaHSvN7" target="_blank" rel="noopener" class="btn-maps-hero">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4285f4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span style="color:#1a1a1a;">Cómo llegar</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- CATEGORÍAS -->
+<section id="categorias">
+  <h2 class="section-title">Nuestras Categorías</h2>
+  <div class="section-line"></div>
+  <div class="cats-grid">
+    <div class="cat-card active" data-cat="todos" onclick="filtrarCat(this,'todos')"><span class="cat-icon">🏪</span><span class="cat-name">Todos</span></div>
+    <div class="cat-card" data-cat="abarrotes" onclick="filtrarCat(this,'abarrotes')"><span class="cat-icon">🥫</span><span class="cat-name">Abarrotes</span></div>
+    <div class="cat-card" data-cat="lacteos" onclick="filtrarCat(this,'lacteos')"><span class="cat-icon">🥛</span><span class="cat-name">Lácteos</span></div>
+    <div class="cat-card" data-cat="panaderia" onclick="filtrarCat(this,'panaderia')"><span class="cat-icon">🍞</span><span class="cat-name">Panadería</span></div>
+    <div class="cat-card" data-cat="bebidas" onclick="filtrarCat(this,'bebidas')"><span class="cat-icon">🥤</span><span class="cat-name">Bebidas</span></div>
+    <div class="cat-card" data-cat="limpieza" onclick="filtrarCat(this,'limpieza')"><span class="cat-icon">🧴</span><span class="cat-name">Limpieza</span></div>
+    <div class="cat-card" data-cat="botanasydulces" onclick="filtrarCat(this,'botanasydulces')"><span class="cat-icon">🍬</span><span class="cat-name">Botanas y Dulces</span></div>
+  </div>
+</section>
+
+<!-- PRODUCTOS (tabla principal) -->
+<section id="seccion-productos">
+  <h2 class="section-title">Nuestros Productos</h2>
+  <div class="section-line"></div>
+  <div class="search-bar">
+    <input type="text" id="buscador" placeholder="Buscar producto..." oninput="buscar()" />
+    <button>🔍</button>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>#</th><th>Producto</th><th>Categoría</th><th>Precio</th><th>Unidad</th><th>Detalle</th></tr>
+      </thead>
+      <tbody id="tabla-body"></tbody>
+    </table>
+    <p id="no-resultados" style="text-align:center;padding:20px;display:none;color:#999;">No se encontraron productos.</p>
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section id="galeria">
+  <h2 class="section-title">Nuestro Ambiente</h2>
+  <div class="section-line"></div>
+  <div class="gallery-grid">
+    <div class="gallery-card"><img src="https://images.unsplash.com/photo-1604719312566-8912e9c8a213?w=600&q=80" alt="Tienda"/><div class="gallery-label">🏪 Interior de la Tienda</div></div>
+    <div class="gallery-card"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&q=80" alt="Frescos"/><div class="gallery-label">🌽 Frescos del Día</div></div>
+    <div class="gallery-card"><img src="https://images.unsplash.com/photo-1556742208-999815fca738?w=600&q=80" alt="Abarrotes"/><div class="gallery-label">🥫 Abarrotes Surtidos</div></div>
+    <div class="gallery-card"><img src="https://images.unsplash.com/photo-1612528443702-f6741f70a049?w=600&q=80" alt="Bebidas"/><div class="gallery-label">🥤 Sección de Bebidas</div></div>
+    <div class="gallery-card"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80" alt="Pan"/><div class="gallery-label">🍞 Panadería</div></div>
+    <div class="gallery-card"><img src="https://images.unsplash.com/photo-1585664811087-47f65abbad64?w=600&q=80" alt="Limpieza"/><div class="gallery-label">🧴 Limpieza y Hogar</div></div>
+  </div>
+</section>
+
+<!-- MAPA SECCIÓN -->
+<section id="seccion-mapa">
+  <h2 class="section-title">📍 Encuéntranos</h2>
+  <div class="section-line"></div>
+  <div class="mapa-wrap">
+    <!-- Mapa embebido: Abarrotes La Merced, Ciudad de México (tienda de abarrotes real) -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.5!2d-99.1192!3d19.4257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff5b2a32c13d%3A0x5b0ef35e8c3bdb8c!2sMercado%20de%20la%20Merced!5e0!3m2!1ses!2smx!4v1716000000000!5m2!1ses!2smx"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Ubicación en Google Maps"
+    ></iframe>
+  </div>
+  <div class="mapa-actions">
+    <a href="https://maps.app.goo.gl/9Zf8KqQw3oXaHSvN7" target="_blank" rel="noopener" class="btn-maps-lg">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Abrir en Google Maps
+    </a>
+    <a href="https://wa.me/5215512345678?text=Hola%2C%20quiero%20hacer%20un%20pedido%20%F0%9F%9B%92" target="_blank" class="btn-wapp-lg">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Pedir por WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- INFO TIENDA -->
+<section id="seccion-info">
+  <h2 class="section-title">Información de la Tienda</h2>
+  <div class="section-line" style="background:white;"></div>
+  <div class="info-grid">
+    <div class="info-card"><div class="info-icon">📍</div><h3>Ubicación</h3><p>Calle Principal #47, Colonia Centro<br>Tu barrio, México</p></div>
+    <div class="info-card"><div class="info-icon">🕐</div><h3>Horarios</h3><p>Lunes a Sábado: 7:00 am – 9:00 pm<br>Domingos: 8:00 am – 3:00 pm</p></div>
+    <div class="info-card"><div class="info-icon">📞</div><h3>Contacto</h3><p>Tel: (55) 1234-5678<br>WhatsApp disponible</p></div>
+    <div class="info-card"><div class="info-icon">💳</div><h3>Formas de Pago</h3><p>Efectivo, tarjeta de débito/crédito y transferencia SPEI</p></div>
+    <div class="info-card"><div class="info-icon">🚚</div><h3>Servicio a Domicilio</h3><p>Pedidos mínimos de $150. Envío gratuito a 1 km de radio.</p></div>
+    <div class="info-card"><div class="info-icon">⭐</div><h3>Nuestra Promesa</h3><p>Calidad, frescura y el mejor precio. ¡Más de 15 años sirviéndote!</p></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 <strong>Abarrotes Alma Marcela Gozo</strong> — <a href="https://www.almamarcela.com.mx">www.almamarcela.com.mx</a></p>
+  <p style="margin-top:6px;">Hecho con ❤️ para nuestra comunidad</p>
+</footer>
+
+<!-- MODAL PRODUCTO INDIVIDUAL -->
+<div class="modal-overlay" id="modal-overlay" onclick="cerrarModal(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="cerrarModal()">✕</button>
+    <div class="modal-emoji" id="modal-emoji"></div>
+    <h2 id="modal-titulo"></h2>
+    <p id="modal-desc"></p>
+    <p><strong>Categoría:</strong> <span id="modal-cat"></span></p>
+    <p><strong>Unidad:</strong> <span id="modal-unidad"></span></p>
+    <div class="modal-price" id="modal-precio"></div>
+  </div>
+</div>
+
+<!-- BOTONES FLOTANTES FAB -->
+<div class="fab-container">
+  <a href="https://wa.me/5215512345678?text=Hola%2C%20quiero%20hacer%20un%20pedido%20en%20Abarrotes%20Alma%20Marcela%20Gozo%20%F0%9F%9B%92" target="_blank" class="fab-btn fab-whatsapp" data-tip="Escríbenos por WhatsApp" aria-label="WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+  <a href="https://maps.app.goo.gl/9Zf8KqQw3oXaHSvN7" target="_blank" rel="noopener" class="fab-btn fab-maps" data-tip="Ver en Google Maps" aria-label="Google Maps">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4285f4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+  </a>
+</div>
+
+<script>
+const productos = [
+  { id:1,  emoji:"🥫", nombre:"Frijoles negros",       cat:"abarrotes",      precio:18.50, unidad:"1 kg",       desc:"Frijoles negros de alta calidad, perfectos para guisos y sopas tradicionales mexicanas." },
+  { id:2,  emoji:"🌽", nombre:"Maíz cacahuazintle",    cat:"abarrotes",      precio:22.00, unidad:"1 kg",       desc:"Maíz especial para pozole. Granos grandes y cremosos." },
+  { id:3,  emoji:"🍚", nombre:"Arroz blanco",           cat:"abarrotes",      precio:19.00, unidad:"1 kg",       desc:"Arroz de grano largo, limpio y suelto al cocinarse." },
+  { id:4,  emoji:"🫙", nombre:"Atún en lata",           cat:"abarrotes",      precio:14.50, unidad:"1 pieza",    desc:"Atún en agua o aceite. Rico en proteína." },
+  { id:5,  emoji:"🫒", nombre:"Aceite vegetal",         cat:"abarrotes",      precio:39.00, unidad:"1 lt",       desc:"Aceite vegetal de maíz, ideal para frituras y guisados." },
+  { id:6,  emoji:"🧂", nombre:"Sal de mesa",            cat:"abarrotes",      precio:8.00,  unidad:"1 kg",       desc:"Sal fina yodatada. Indispensable en toda cocina." },
+  { id:7,  emoji:"🌶️",nombre:"Chile ancho seco",       cat:"abarrotes",      precio:12.00, unidad:"100 g",      desc:"Chile ancho de color rojo oscuro, ideal para moles y salsas." },
+  { id:8,  emoji:"🫙", nombre:"Pasta para sopa",        cat:"abarrotes",      precio:7.50,  unidad:"200 g",      desc:"Fideos, coditos o estrellas. Variedad disponible." },
+  { id:9,  emoji:"🥛", nombre:"Leche entera",           cat:"lacteos",        precio:23.00, unidad:"1 lt",       desc:"Leche entera pasteurizada, fresca diariamente." },
+  { id:10, emoji:"🧀", nombre:"Queso fresco",           cat:"lacteos",        precio:55.00, unidad:"500 g",      desc:"Queso blanco suave, perfecto para quesadillas y ensaladas." },
+  { id:11, emoji:"🧈", nombre:"Mantequilla",            cat:"lacteos",        precio:42.00, unidad:"1 barra",    desc:"Mantequilla de alta calidad con y sin sal." },
+  { id:12, emoji:"🍦", nombre:"Crema ácida",            cat:"lacteos",        precio:18.00, unidad:"500 ml",     desc:"Crema espesa para enchiladas, tacos y sopas." },
+  { id:13, emoji:"🥚", nombre:"Huevo blanco",           cat:"lacteos",        precio:35.00, unidad:"12 piezas",  desc:"Huevo fresco de rancho, grande y nutritivo." },
+  { id:14, emoji:"🍞", nombre:"Pan Bimbo blanco",       cat:"panaderia",      precio:34.00, unidad:"1 bolsa",    desc:"Pan de caja suave, perfecto para sandwiches y tostadas." },
+  { id:15, emoji:"🥐", nombre:"Cuernito mantequilla",   cat:"panaderia",      precio:6.00,  unidad:"1 pieza",    desc:"Cuernito recién horneado con mantequilla, hojaldrado y crujiente." },
+  { id:16, emoji:"🫓", nombre:"Tortillas de harina",    cat:"panaderia",      precio:18.00, unidad:"paquete 10", desc:"Tortillas de harina suaves y frescas." },
+  { id:17, emoji:"🧇", nombre:"Galletas Marías",        cat:"panaderia",      precio:12.50, unidad:"1 paquete",  desc:"Galletas clásicas, deliciosas con leche o para postres." },
+  { id:18, emoji:"🥤", nombre:"Refresco Coca-Cola",     cat:"bebidas",        precio:16.00, unidad:"600 ml",     desc:"La bebida más famosa del mundo. Fría y refrescante." },
+  { id:19, emoji:"💧", nombre:"Agua natural",           cat:"bebidas",        precio:10.00, unidad:"1 lt",       desc:"Agua embotellada purificada. Hidratación pura." },
+  { id:20, emoji:"☕", nombre:"Café soluble Nescafé",   cat:"bebidas",        precio:48.00, unidad:"100 g",      desc:"Café instantáneo de sabor intenso y aroma inconfundible." },
+  { id:21, emoji:"🧃", nombre:"Jugo de naranja",        cat:"bebidas",        precio:22.00, unidad:"1 lt",       desc:"Jugo natural de naranja sin azúcar añadida." },
+  { id:22, emoji:"🫖", nombre:"Té en bolsitas",         cat:"bebidas",        precio:28.00, unidad:"25 bolsas",  desc:"Té de manzanilla, menta o limón. Relajante y saludable." },
+  { id:23, emoji:"🧴", nombre:"Jabón de trastes",       cat:"limpieza",       precio:19.50, unidad:"500 ml",     desc:"Jabón líquido desengrasante, espuma abundante." },
+  { id:24, emoji:"🫧", nombre:"Detergente en polvo",    cat:"limpieza",       precio:45.00, unidad:"1 kg",       desc:"Detergente para ropa con fragancia fresca y extra suavizante." },
+  { id:25, emoji:"🧻", nombre:"Papel higiénico",        cat:"limpieza",       precio:52.00, unidad:"4 rollos",   desc:"Papel suave doble hoja. Confort superior." },
+  { id:26, emoji:"🪣", nombre:"Cloro desinfectante",    cat:"limpieza",       precio:16.00, unidad:"1 lt",       desc:"Cloro al 6% para desinfección de superficies y ropa blanca." },
+  { id:27, emoji:"🍬", nombre:"Dulces surtidos",        cat:"botanasydulces", precio:1.00,  unidad:"1 pieza",    desc:"Gran variedad: paletas, tamarindos, gomitas y más." },
+  { id:28, emoji:"🍫", nombre:"Chocolate Carlos V",     cat:"botanasydulces", precio:12.00, unidad:"1 pieza",    desc:"Chocolate de leche suave. El clásico mexicano." },
+  { id:29, emoji:"🍿", nombre:"Papas fritas",           cat:"botanasydulces", precio:14.00, unidad:"1 bolsa",    desc:"Papas crujientes en sabores natural, limón y picante." },
+  { id:30, emoji:"🌰", nombre:"Cacahuates japoneses",   cat:"botanasydulces", precio:10.00, unidad:"100 g",      desc:"Cacahuates cubiertos crujientes, el botana perfecta." },
+];
+
+const badgeClass = { abarrotes:"badge-verde", lacteos:"badge-azul", panaderia:"badge-naranja", bebidas:"badge-morado", limpieza:"badge-azul", botanasydulces:"badge-rojo" };
+const catLabel   = { abarrotes:"Abarrotes", lacteos:"Lácteos", panaderia:"Panadería", bebidas:"Bebidas", limpieza:"Limpieza", botanasydulces:"Botanas y Dulces" };
+
+let catActiva = "todos";
+let busqueda  = "";
+
+function renderTabla() {
+  const tbody = document.getElementById("tabla-body");
+  const noRes = document.getElementById("no-resultados");
+  const filtrados = productos.filter(p => {
+    const matchCat = catActiva === "todos" || p.cat === catActiva;
+    const matchBus = p.nombre.toLowerCase().includes(busqueda.toLowerCase()) || catLabel[p.cat].toLowerCase().includes(busqueda.toLowerCase());
+    return matchCat && matchBus;
+  });
+  if (!filtrados.length) { tbody.innerHTML = ""; noRes.style.display = "block"; return; }
+  noRes.style.display = "none";
+  tbody.innerHTML = filtrados.map((p, i) => `
+    <tr>
+      <td><strong>${i+1}</strong></td>
+      <td>${p.emoji} ${p.nombre}</td>
+      <td><span class="badge ${badgeClass[p.cat]}">${catLabel[p.cat]}</span></td>
+      <td><strong style="color:var(--rojo)">$${p.precio.toFixed(2)}</strong></td>
+      <td>${p.unidad}</td>
+      <td><button onclick="abrirModal(${p.id})" style="background:var(--verde);color:white;border:none;padding:7px 16px;border-radius:50px;cursor:pointer;font-size:0.82rem;font-weight:700;" onmouseover="this.style.background='#1a3d20'" onmouseout="this.style.background='var(--verde)'">Ver más</button></td>
+    </tr>`).join("");
+}
+
+function filtrarCat(el, cat) {
+  catActiva = cat;
+  document.querySelectorAll(".cat-card").forEach(c => c.classList.remove("active"));
+  el.classList.add("active");
+  renderTabla();
+}
+
+function buscar() { busqueda = document.getElementById("buscador").value; renderTabla(); }
+
+function abrirModal(id) {
+  const p = productos.find(x => x.id === id);
+  document.getElementById("modal-emoji").textContent  = p.emoji;
+  document.getElementById("modal-titulo").textContent = p.nombre;
+  document.getElementById("modal-desc").textContent   = p.desc;
+  document.getElementById("modal-cat").textContent    = catLabel[p.cat];
+  document.getElementById("modal-unidad").textContent = p.unidad;
+  document.getElementById("modal-precio").textContent = `$${p.precio.toFixed(2)} MXN`;
+  document.getElementById("modal-overlay").classList.add("open");
+}
+function cerrarModal(e) {
+  if (!e || e.target === document.getElementById("modal-overlay"))
+    document.getElementById("modal-overlay").classList.remove("open");
+}
+
+let panelCatActiva = "todos";
+let panelBusqueda  = "";
+
+function abrirPanel(tipo) {
+  const overlay = document.getElementById("panel-overlay");
+  const body    = document.getElementById("panel-body");
+  panelCatActiva = "todos";
+  panelBusqueda  = "";
+
+  if (tipo === "productos") {
+    body.innerHTML = `
+      <h2 style="font-family:'Playfair Display',serif;color:var(--verde);font-size:1.8rem;margin-bottom:6px;">🛒 Todos los Productos</h2>
+      <p style="color:#666;margin-bottom:18px;">Explora nuestro catálogo completo de <strong>30 productos</strong>. Filtra por categoría o busca tu producto favorito.</p>
+      <div class="panel-search">
+        <input type="text" id="panel-buscador" placeholder="Buscar..." oninput="panelBuscar()" />
+        <button>🔍</button>
+      </div>
+      <div class="panel-cat-tabs" id="panel-tabs">
+        <button class="active" onclick="panelFiltrar(this,'todos')">🏪 Todos</button>
+        <button onclick="panelFiltrar(this,'abarrotes')">🥫 Abarrotes</button>
+        <button onclick="panelFiltrar(this,'lacteos')">🥛 Lácteos</button>
+        <button onclick="panelFiltrar(this,'panaderia')">🍞 Panadería</button>
+        <button onclick="panelFiltrar(this,'bebidas')">🥤 Bebidas</button>
+        <button onclick="panelFiltrar(this,'limpieza')">🧴 Limpieza</button>
+        <button onclick="panelFiltrar(this,'botanasydulces')">🍬 Botanas</button>
+      </div>
+      <div class="panel-prod-grid" id="panel-grid"></div>
+      <p id="panel-no-res" style="display:none;text-align:center;color:#999;padding:20px;">No se encontraron productos.</p>`;
+    renderPanelProductos();
+
+  } else if (tipo === "galeria") {
+    body.innerHTML = `
+      <h2 style="font-family:'Playfair Display',serif;color:var(--verde);font-size:1.8rem;margin-bottom:6px;">🖼️ Galería de la Tienda</h2>
+      <p style="color:#666;margin-bottom:20px;">Conoce los diferentes rincones de <strong>Abarrotes Alma Marcela Gozo</strong>.</p>
+      <div class="panel-gallery">
+        <div class="panel-gallery-card"><img src="https://images.unsplash.com/photo-1604719312566-8912e9c8a213?w=600&q=80" alt="Interior"/><div class="gl-label">🏪 Interior de la Tienda</div><div class="gl-desc">Pasillos bien organizados con todos los productos a la mano.</div></div>
+        <div class="panel-gallery-card"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&q=80" alt="Frescos"/><div class="gl-label">🌽 Frescos del Día</div><div class="gl-desc">Frutas y verduras frescas que renuevan diariamente.</div></div>
+        <div class="panel-gallery-card"><img src="https://images.unsplash.com/photo-1556742208-999815fca738?w=600&q=80" alt="Abarrotes"/><div class="gl-label">🥫 Abarrotes Surtidos</div><div class="gl-desc">Amplio surtido de enlatados, granos, aceites y más.</div></div>
+        <div class="panel-gallery-card"><img src="https://images.unsplash.com/photo-1612528443702-f6741f70a049?w=600&q=80" alt="Bebidas"/><div class="gl-label">🥤 Sección de Bebidas</div><div class="gl-desc">Refrescos, aguas, jugos y bebidas calientes. Siempre frías.</div></div>
+        <div class="panel-gallery-card"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80" alt="Pan"/><div class="gl-label">🍞 Panadería</div><div class="gl-desc">Pan fresco del día: bolillos, cuernitos, tortillas y galletas.</div></div>
+        <div class="panel-gallery-card"><img src="https://images.unsplash.com/photo-1585664811087-47f65abbad64?w=600&q=80" alt="Limpieza"/><div class="gl-label">🧴 Limpieza y Hogar</div><div class="gl-desc">Todo para mantener tu hogar limpio y ordenado.</div></div>
+      </div>`;
+
+  } else if (tipo === "tienda") {
+    body.innerHTML = `
+      <div class="tienda-banner">
+        <h2>🏪 Abarrotes Alma Marcela Gozo</h2>
+        <p>Tu tienda de barrio de confianza. Más de <strong>15 años</strong> sirviéndonos con calidad, frescura y los mejores precios.</p>
+      </div>
+      <div class="tienda-grid">
+        <div class="tienda-card"><div class="t-icon">📍</div><h3>Ubicación</h3><p>Calle Principal #47<br>Colonia Centro, México</p></div>
+        <div class="tienda-card"><div class="t-icon">🕐</div><h3>Horarios</h3><p><strong>Lun–Sáb:</strong> 7:00am–9:00pm<br><strong>Dom:</strong> 8:00am–3:00pm</p></div>
+        <div class="tienda-card"><div class="t-icon">📞</div><h3>Contacto</h3><p>Tel: (55) 1234-5678<br>WhatsApp disponible</p></div>
+        <div class="tienda-card"><div class="t-icon">💳</div><h3>Formas de Pago</h3><p>✔ Efectivo<br>✔ Tarjeta débito/crédito<br>✔ SPEI</p></div>
+        <div class="tienda-card"><div class="t-icon">🚚</div><h3>Domicilio</h3><p>Mínimo: <strong>$150 MXN</strong><br>Gratis en radio 1 km</p></div>
+        <div class="tienda-card"><div class="t-icon">⭐</div><h3>Nuestra Promesa</h3><p>Calidad y precios justos de lunes a domingo.</p></div>
+        <div class="tienda-card"><div class="t-icon">📦</div><h3>Catálogo</h3><p><strong>+30 productos</strong> en 6 categorías.</p></div>
+        <div class="tienda-card"><div class="t-icon">🤝</div><h3>¿Quiénes Somos?</h3><p>Tienda familiar fundada por la Sra. Alma Marcela.</p></div>
+      </div>`;
+  }
+
+  overlay.classList.add("open");
+}
+
+function renderPanelProductos() {
+  const grid  = document.getElementById("panel-grid");
+  const noRes = document.getElementById("panel-no-res");
+  if (!grid) return;
+  const filtrados = productos.filter(p => {
+    const matchCat = panelCatActiva === "todos" || p.cat === panelCatActiva;
+    const matchBus = p.nombre.toLowerCase().includes(panelBusqueda.toLowerCase()) || catLabel[p.cat].toLowerCase().includes(panelBusqueda.toLowerCase());
+    return matchCat && matchBus;
+  });
+  if (!filtrados.length) { grid.innerHTML = ""; noRes.style.display = "block"; return; }
+  noRes.style.display = "none";
+  grid.innerHTML = filtrados.map(p => `
+    <div class="prod-mini" onclick="abrirModal(${p.id});cerrarPanel()">
+      <span class="pm-emoji">${p.emoji}</span>
+      <span class="pm-nombre">${p.nombre}</span>
+      <span class="pm-precio">$${p.precio.toFixed(2)}</span>
+      <span class="pm-unidad">${p.unidad}</span>
+    </div>`).join("");
+}
+
+function panelFiltrar(el, cat) {
+  panelCatActiva = cat;
+  document.querySelectorAll(".panel-cat-tabs button").forEach(b => b.classList.remove("active"));
+  el.classList.add("active");
+  renderPanelProductos();
+}
+
+function panelBuscar() {
+  panelBusqueda = document.getElementById("panel-buscador").value;
+  renderPanelProductos();
+}
+
+function cerrarPanel() { document.getElementById("panel-overlay").classList.remove("open"); }
+function cerrarPanelFondo(e) { if (e.target === document.getElementById("panel-overlay")) cerrarPanel(); }
+
+renderTabla();
+</script>
+</body>
+</html>
